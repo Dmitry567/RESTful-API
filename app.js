@@ -16,6 +16,9 @@ mongoose.connect(
     useUnifiedTopology: true
   }
 );
+// This statement against deprecation warning in the terminal
+//when we use mongoose
+mongoose.Promise = global.Promise;
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
