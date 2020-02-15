@@ -20,9 +20,9 @@ mongoose.connect(
 //when we use mongoose
 mongoose.Promise = global.Promise;
 
-app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(morgan("dev"));
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
